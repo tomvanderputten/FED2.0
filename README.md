@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw/Rood
 
   #### Je focus:
-  test hoi test
+  Extra aandacht voor de surface laag
  
 </details>
 
