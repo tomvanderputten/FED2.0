@@ -36,15 +36,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.ajax.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Home page
+  https://www.ajax.nl/  
+  <img src="readme-images/homepage.png" width="375px" alt="homepage van Ajax">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Spelerinformatie pagina 
+  https://www.ajax.nl/teams/ajax-1/brian-brobbey/  
+  <img src="readme-images/spelerinfo.png" width="375px" alt="Pagina over individuele informatie van spelers">
  
 </details>
 
