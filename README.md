@@ -58,7 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Toen ik voor het eerst de screenreader aan deed begon het al be intimiderend omdat er gelijk harde en snelle stemmen aan gingen. Dit was even wennen vooral omdat de screenreader zo snel praatte. Daarnaast duurde het wel een tijdje voordat ik alle controls onder de knieen had en snapte, je moet namelijk meestal drie verschillende keys aanklikken om een actie uit te voeren dit vond ik zelf al verwarrend ook omdat ik niet zo vaak shortcuts gebruik dus ik moest zelf ook nog zoeken op het toetsenboord. Toen ik de ajax website ging bekijken en later de website van Femke (Paradiso) merkte ik dat er te veel extra informatie voorgelezen werd die naar mijn idee overbodig waren zoals, level 1, level 2, level 3, heading 2, heading 3 etc. Ook vond ik het nogal chaotisch omdat je naast de snelle en harde stemmen ook nog de lastige keys moest besturen. Wat mij ook opviel wat voornamelijk vervelend is voor blinde mensen dat niet elke afbeelding uitgelegd werd wat erop stond. Dit zal waarschijnlijk te maken hebben met de alt teksten die missen.
 
 </details>
 
