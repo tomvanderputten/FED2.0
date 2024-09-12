@@ -96,7 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Tot nu toe is alles goed verlopen, het enige dat ik heb gedaan is de html geschreven van een van de twee pagina's die ik ga maken.
 
 
   ### Agenda voor meeting
