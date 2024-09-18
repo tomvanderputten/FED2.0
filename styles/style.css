@@ -2,9 +2,13 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+	box-sizing:border-box;  
 }
 
+@font-face {
+    font-family: 'SolaneTrial';
+    src: url("/fonts/SolanelTrial-Bold-BF641d049dbbcae.otf")
+}
 
 
 
@@ -17,6 +21,8 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--ajax-red: #D2122E;
+
 }
 
 
@@ -28,4 +34,63 @@
 /****************/
 
 /* jouw code */
+
+body{
+	margin: 0;
+}
+
+header {
+  min-height:5em;
+  background-color:var(--ajax-red); 
+  display: flex;
+  align-items: center;
+  position: sticky;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+header nav{
+	display: none;
+	
+}
+
+header nav a{
+	color: var(--color-background);
+}
+
+header a:nth-child(1){
+	color: var(--color-background);
+	text-decoration: none;
+	padding-left: 1em;
+	font-size: 2em;
+	font-family: 'SolaneTrial';
+}
+
+header a:nth-child(2), a:nth-of-type(3) {
+	margin: 1em;
+	justify-content: flex-end;
+}
+
+header a:nth-child(2) svg{
+	position: relative;
+	top: .1em;
+	width: 37px;
+	height: auto;
+	aspect-ratio: 1;
+	background-color: var(--color-background);
+	border-radius: 50%;
+	padding: 7px;
+}
+
+header a:nth-of-type(3) svg{
+	position: relative;
+	top: .1em;
+	width: 37px;
+	height: auto;
+	aspect-ratio: 1;
+	background-color: var(--color-background);
+	border-radius: 50%;
+	padding: 7px;
+	fill: var(--color-text);
+}
 
