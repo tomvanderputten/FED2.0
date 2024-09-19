@@ -3,12 +3,25 @@
 /**************/
 *, *::after, *::before {
 	box-sizing:border-box;  
+	max-width: 100%;
 }
 
 @font-face {
-    font-family: 'SolaneTrial';
+    font-family: 'SolaneTrial-Bold';
     src: url("/fonts/SolanelTrial-Bold-BF641d049dbbcae.otf")
 }
+
+@font-face {
+    font-family: 'SolaneTrial-Regular';
+    src: url("/fonts/SolanelTrial-Regular-BF641d049e3399f.otf")
+}
+
+@font-face {
+    font-family: 'SolaneTrial-Thin';
+    src: url("/fonts/SolanelTrial-Thin-BF641d049e0de32.otf")
+}
+
+
 
 
 
@@ -21,12 +34,9 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
-	--ajax-red: #D2122E;
+	--ajax-red: #B3112F;
 
 }
-
-
-
 
 
 /****************/
@@ -47,11 +57,11 @@ header {
   position: sticky;
   justify-content: space-between;
   padding: 0 1em;
+  top: 0; 
 }
 
 header nav{
 	display: none;
-	
 }
 
 header nav a{
@@ -61,14 +71,14 @@ header nav a{
 header a:nth-child(1){
 	color: var(--color-background);
 	text-decoration: none;
-	padding-left: 1em;
+	padding-left: 0.2em;
 	font-size: 2em;
-	font-family: 'SolaneTrial';
+	font-family: 'SolaneTrial-Bold';
+	margin-right: auto;
 }
 
 header a:nth-child(2), a:nth-of-type(3) {
-	margin: 1em;
-	justify-content: flex-end;
+	margin: 0.5em;
 }
 
 header a:nth-child(2) svg{
@@ -94,3 +104,41 @@ header a:nth-of-type(3) svg{
 	fill: var(--color-text);
 }
 
+main article:first-of-type {
+	background-color: var(--ajax-red);
+	margin-top: 0;
+	color: var(--color-background);
+	padding: 1.6em;
+}
+
+main article h1:first-of-type{
+	margin: 0;
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1.9em;
+	
+  }
+
+  main article p:first-of-type{
+	font-family:'SolaneTrial-Thin';
+	font-size: 1.2em;
+  }
+
+  main article:first-child p:nth-child(3){
+	font-family: 'SolaneTrial-Bold';
+	font-size: 2em;
+	background-color: var(--color-background);
+	color: var(--ajax-red);
+	position: absolute;
+	padding: 0.2em;
+    width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  main article:first-child img {
+	display: block;
+	padding-top: 4em;
+	
+  }
