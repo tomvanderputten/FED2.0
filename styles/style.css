@@ -58,6 +58,7 @@ header {
   justify-content: space-between;
   padding: 0 1em;
   top: 0; 
+  z-index: 1;
 }
 
 header nav{
@@ -150,5 +151,6 @@ main article h1:first-of-type{
 	font-family: 'SolaneTrial-Bold' ;
 	padding: 0.3em 0.5em 0.3em 0.5em;
 	position: absolute;
+	z-index: 0;
 	margin-top: 17em;
   }
