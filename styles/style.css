@@ -8,17 +8,17 @@
 
 @font-face {
     font-family: 'SolaneTrial-Bold';
-    src: url("/fonts/SolanelTrial-Bold-BF641d049dbbcae.otf")
+    src: url("../fonts/SolanelTrial-Bold-BF641d049dbbcae.otf")
 }
 
 @font-face {
     font-family: 'SolaneTrial-Regular';
-    src: url("/fonts/SolanelTrial-Regular-BF641d049e3399f.otf")
+    src: url("../fonts/SolanelTrial-Regular-BF641d049e3399f.otf")
 }
 
 @font-face {
     font-family: 'SolaneTrial-Thin';
-    src: url("/fonts/SolanelTrial-Thin-BF641d049e0de32.otf")
+    src: url("../fonts/SolanelTrial-Thin-BF641d049e0de32.otf")
 }
 
 
@@ -128,7 +128,6 @@ main article h1:first-of-type{
 	font-size: 2em;
 	background-color: var(--color-background);
 	color: var(--ajax-red);
-	position: absolute;
 	padding: 0.2em;
     width: 1.5em;
 	height: 1.5em;
@@ -139,6 +138,17 @@ main article h1:first-of-type{
 
   main article:first-child img {
 	display: block;
-	padding-top: 4em;
+	padding-top: 1em;
 	
+  }
+
+  article:first-of-type > a {
+	font-size: 1.1em;
+	color: var(--color-text);
+	text-decoration: none;
+	background-color: var(--color-background);
+	font-family: 'SolaneTrial-Bold' ;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	position: absolute;
+	margin-top: 17em;
   }
