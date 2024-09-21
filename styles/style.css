@@ -32,7 +32,7 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
+	--color-text:#181314;
 	--color-background:#eee;
 	--ajax-red: #B3112F;
 
@@ -48,6 +48,8 @@
 body{
 	margin: 0;
 }
+
+
 
 header {
   min-height:5em;
@@ -110,6 +112,7 @@ main article:first-of-type {
 	margin-top: 0;
 	color: var(--color-background);
 	padding: 1.6em;
+	position: relative;
 }
 
 main article h1:first-of-type{
@@ -143,7 +146,7 @@ main article h1:first-of-type{
 	
   }
 
-  article:first-of-type > a {
+  main article:first-of-type a:nth-of-type(1) {
 	font-size: 1.1em;
 	color: var(--color-text);
 	text-decoration: none;
@@ -152,5 +155,91 @@ main article h1:first-of-type{
 	padding: 0.3em 0.5em 0.3em 0.5em;
 	position: absolute;
 	z-index: 0;
-	margin-top: 17em;
+	bottom: 1em;
   }
+
+  section:nth-of-type(1) ul {
+    list-style: none;
+    padding: 1em;
+}
+
+section:nth-of-type(1) ul li{
+	margin: 1em 1em 1.7em 0.5em;
+	display: flex;
+	align-items: center;
+}
+
+section:nth-of-type(1) ul li::before {
+    content: '';
+    display: inline-block;
+    background-size: contain;
+	background-repeat: no-repeat;
+    width: 5.3em; 
+    height: 5.3em; 
+    margin-right: 1em;
+}
+
+section:nth-of-type(1) ul li:first-of-type::before {
+    background-image: url('../images/cirkel25.svg');
+}
+
+section:nth-of-type(1) ul li:nth-of-type(2)::before {
+    background-image: url('../images/cirkel78.svg');
+}
+
+section:nth-of-type(1) ul li:nth-of-type(3)::before {
+    background-image: url('../images/cirkel0.svg');
+}
+
+section:nth-of-type(1) ul li:nth-of-type(4)::before {
+    background-image: url('../images/cirkel50.svg');
+}
+
+section:nth-of-type(1) ul li span:first-of-type {
+    font-weight: bold;
+    color: var(--color-text);
+    margin-right: 10px;
+	font-family: 'SolaneTrial-Bold';
+	font-size: 2.1em;
+}
+
+section:nth-of-type(1) ul li span:nth-of-type(2) {
+	font-weight: bold;
+    color: var(--color-text);
+	font-family: 'SolaneTrial-Regular';
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1em;
+}
+
+main article:nth-of-type(2){
+	margin-left: 1em;
+}
+
+main article:nth-of-type(2) h2{
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1.8em;
+}
+
+main article:nth-of-type(2) h3{
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1em;
+
+}
+
+main article:nth-of-type(2) ul li{
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+article:nth-of-type(2) ul li span:nth-of-type(1){
+	font-family: 'SolaneTrial-Bold';
+	flex: 1;
+
+}
+
+article:nth-of-type(2) ul li span:nth-of-type(2){
+	font-family: 'SolaneTrial-Regular';
+	margin-right: 2em;
+}
