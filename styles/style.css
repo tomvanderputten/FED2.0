@@ -35,6 +35,7 @@
 	--color-text:#181314;
 	--color-background:#eee;
 	--ajax-red: #B3112F;
+	--background-grey: #413E3E;
 
 }
 
@@ -49,6 +50,15 @@ body{
 	margin: 0;
 }
 
+h2{
+	font-family: 'SolaneTrial-Bold';
+	line-height: 0.98em;
+	font-size: 1.65em;
+}
+
+p{
+	font-family: 'SolaneTrial-Regular';
+}
 
 
 header {
@@ -243,3 +253,68 @@ article:nth-of-type(2) ul li span:nth-of-type(2){
 	font-family: 'SolaneTrial-Regular';
 	margin-right: 2em;
 }
+
+section:nth-of-type(2) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em 2em 1em;
+}
+
+section:nth-of-type(2) img {
+	width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+section:nth-of-type(2) h2{
+  position: absolute;
+  top: 14%;
+  left: 12%;
+  font-family: 'SolaneTrial-Bold';
+  font-size: 1.5em;
+  color: var(--color-background);
+}
+
+section:nth-of-type(2) p{
+	position: absolute;
+	font-family: 'SolaneTrial-Regular';
+	left: 12%;
+	top: 42%;
+	color: var(--color-background);
+	font-size: 1.1em;
+}
+
+section:nth-of-type(2) a{
+	position: absolute;
+	text-decoration: none;
+	background-color: var(--color-background);
+	font-family: 'SolaneTrial-Bold';
+	color: var(--color-text);
+	padding: .2em .5em .2em .5em;
+	left: 12%;
+	bottom: 25%;
+	font-size: 1.05em;
+}
+
+article:nth-of-type(3), article:nth-of-type(4){
+	position: relative;
+	margin: 1em;
+	border-bottom: solid 1px var(--ajax-red);
+}
+
+article:nth-of-type(3) p:nth-of-type(2), article:nth-of-type(4) p:nth-of-type(2){
+	background-color: var(--background-grey);
+	color: var(--color-background);
+	font-size: .65em;
+	padding: .5em;
+	width: fit-content;
+} 
+
+article:nth-of-type(3) svg, article:nth-of-type(4) svg{
+	position: absolute;
+	bottom: 0.5em;
+	right: 0;
+}
+
