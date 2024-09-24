@@ -74,14 +74,37 @@ header {
 }
 
 header nav{
+	display: flex;
+	justify-content: center;
+	gap: 1.1em;
+	align-items: center;
+	font-size: 1.05em;
+}
+
+header img{
 	display: none;
 }
 
 header nav a{
 	color: var(--color-background);
+	text-decoration: none;
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1em;
+	justify-content: center;
 }
 
-header a:nth-child(1){
+[class="navmedia" ]{
+    display: none;
+}
+
+header a:nth-of-type(4), header a:nth-of-type(5){
+	border: solid;
+	padding: .3em .7em;
+	border-radius: 1em;
+}
+
+
+header > a:nth-child(2){
 	color: var(--color-background);
 	text-decoration: none;
 	padding-left: 0.2em;
@@ -90,11 +113,11 @@ header a:nth-child(1){
 	margin-right: auto;
 }
 
-header a:nth-child(2), a:nth-of-type(3) {
+header a:nth-child(6), a:nth-of-type(7) {
 	margin: 0.5em;
 }
 
-header a:nth-child(2) svg{
+header a:nth-child(6) svg{
 	position: relative;
 	top: .1em;
 	width: 37px;
@@ -105,7 +128,7 @@ header a:nth-child(2) svg{
 	padding: 7px;
 }
 
-header a:nth-of-type(3) svg{
+header a:nth-of-type(7) svg{
 	position: relative;
 	top: .1em;
 	width: 37px;
@@ -115,6 +138,10 @@ header a:nth-of-type(3) svg{
 	border-radius: 50%;
 	padding: 7px;
 	fill: var(--color-text);
+}
+
+header a:nth-of-type(8), header a:nth-of-type(9){
+   display: none;
 }
 
 main article:first-of-type {
@@ -413,6 +440,27 @@ footer article:first-of-type a{
 	font-size: 1.3em;
 }
 
+@media (min-width: 768px) {
+    .navmedia {
+        display: inline-block;
+    }
+	header a:nth-child(6), a:nth-of-type(7) {
+		display: none;
+	}
+	header img{
+		display: inline-block;
+    	padding: 1em;
+	}
+	header a:nth-of-type(8), header a:nth-of-type(9){
+		display: inline-block;
+	 }
+	header a:nth-of-type(8){
+		border-right: solid var(--color-background) 1px;
+	}
+
+	
+
+}
 
 
 
