@@ -70,7 +70,7 @@ header {
   justify-content: space-between;
   padding: 0 1em;
   top: 0; 
-  z-index: 1;
+  z-index: 2;
 }
 
 header nav{
@@ -94,14 +94,10 @@ header nav a{
 }
 
 [class="navmedia" ]{
-    display: none;
+   display: none;
 }
 
-header a:nth-of-type(4), header a:nth-of-type(5){
-	border: solid;
-	padding: .3em .7em;
-	border-radius: 1em;
-}
+
 
 
 header > a:nth-child(2){
@@ -150,6 +146,7 @@ main article:first-of-type {
 	color: var(--color-background);
 	padding: 1.6em;
 	position: relative;
+	height: 45em;
 }
 
 main article h1:first-of-type{
@@ -162,6 +159,7 @@ main article h1:first-of-type{
   main article p:first-of-type{
 	font-family:'SolaneTrial-Thin';
 	font-size: 1.2em;
+	max-width: 1100px;
   }
 
   main article:first-child p:nth-child(3){
@@ -179,8 +177,10 @@ main article h1:first-of-type{
 
   main article:first-child img {
 	display: block;
-	padding-top: 1em;
-	
+	position: absolute;
+	bottom: 0;
+	max-width: 345px;
+
   }
 
   main article:first-of-type a:nth-of-type(1) {
@@ -191,11 +191,14 @@ main article h1:first-of-type{
 	font-family: 'SolaneTrial-Bold' ;
 	padding: 0.3em 0.5em 0.3em 0.5em;
 	position: absolute;
-	z-index: 0;
+	z-index: 1;
 	bottom: 1em;
   }
 
 main section:nth-of-type(1) ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
     list-style: none;
     padding: 1em;
 }
@@ -245,12 +248,12 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
     color: var(--color-text);
 	font-family: 'SolaneTrial-Regular';
 	display: flex;
-	flex-wrap: wrap;
 	font-size: 1em;
 }
 
 main article:nth-of-type(2){
 	margin-left: 1em;
+	max-width: 400px;
 }
 
 main article:nth-of-type(2) h2{
@@ -387,12 +390,11 @@ main article:nth-of-type(5) h2 {
 	padding-left: 0.5em;
 }
 
+
 footer section{
 	font-family: 'SolaneTrial-Regular';
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
-	flex-direction: column;
 	padding: 2em 1em ;
 }
 
@@ -424,6 +426,7 @@ footer ul {
     list-style: none;
     padding: 0;
     margin-bottom: 0;
+	display: flex;
 }
 
 footer article:first-of-type{
@@ -457,10 +460,25 @@ footer article:first-of-type a{
 	header a:nth-of-type(8){
 		border-right: solid var(--color-background) 1px;
 	}
+	header a:nth-of-type(4), header a:nth-of-type(5){
+		border: solid var(--color-background) 2px;
+		padding: .3em .7em;
+		border-radius: 1em;
+	}
+    header a:nth-of-type(4):hover, header a:nth-of-type(5):hover{
+		background-color: var(--color-background);
+		color: var(--color-text);
+	}
+	main section:nth-of-type(1) ul li::before {
+		width: 7em; 
+		height: 7em; 
+	}
 
-	
+
+
 
 }
+
 
 
 
