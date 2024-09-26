@@ -1,11 +1,12 @@
 // JavaScript Document
-console.log("hi");
+console.log("test");
 
-var openButton = document.querySelector("header > a")
 
-openButton.onclick = openMenu
+//codepen van hamburger menu gebruikt als inspiratie https://codepen.io/tomvanderputten/pen/RwzmZgJ
+var openButton = document.querySelector(".hamburgericoon")
 
-function openMenu() {
-    var deNav = document.querySelector("nav");
-    deNav.classList.add("toonMenu");
-  }
+var deNav = document.querySelector("header nav ul")
+
+openButton.onclick = function() {
+    deNav.classList.toggle("toonMenu")
+}

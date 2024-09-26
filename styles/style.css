@@ -72,6 +72,7 @@ header {
   padding: 0 1em;
   top: 0; 
   z-index: 2;
+  background-image: url("../images/visuals-patterns-red.png");
 }
 
 header nav{
@@ -92,6 +93,7 @@ header nav a{
 	font-family: 'SolaneTrial-Bold';
 	font-size: 1em;
 	justify-content: center;
+	position: relative;
 }
 
 
@@ -100,17 +102,34 @@ header nav a{
  }
 
  header nav ul{
-	display: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 	position: fixed;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: 4.5em;
 	bottom: 0;
-	background-color: #181314;
 	margin-top: 0;
 	margin-bottom: 0;
+	list-style: none;
+	background-image: url("../images/visuals-patterns-red.png");
+	background-position: 0px -80px;
+	padding-top: 2em;
+	transform: translateY(-120%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 1;
  }
 
+header nav ul.toonMenu {
+	transform: translateY(0%);
+}
+
+
+ header nav ul li{
+	padding: .3em;
+	font-size: 2em;
+ }
 
 header > a:nth-child(2){
 	color: var(--color-background);
@@ -120,6 +139,36 @@ header > a:nth-child(2){
 	font-family: 'SolaneTrial-Bold';
 	margin-right: auto;
 }
+
+header a:nth-of-type(4), header a:nth-of-type(5){
+	border: solid var(--color-background) 2px;
+	padding: .3em .7em;
+	border-radius: 1em;
+}
+
+header a:nth-of-type(4):hover, header a:nth-of-type(5):hover{
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
+
+/* bron voor hover is https://youtu.be/_SWVPKY9ddI?si=ktKkbeRn0LwwXwa8 */
+
+header nav a:nth-of-type(1)::before, header nav a:nth-of-type(2)::before, header nav a:nth-of-type(3)::before {
+	content:'';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background-color: var(--color-background);
+	transition: all .5s;
+}
+
+header nav a:nth-of-type(1):hover::before, header nav a:nth-of-type(2):hover::before, header nav a:nth-of-type(3):hover::before {
+    width: 100%;
+}
+/* 
+bron tot hier */
 
 header a:nth-child(6), a:nth-of-type(7) {
 	margin: 0.5em;
@@ -159,6 +208,9 @@ main article:first-of-type {
 	padding: 1.6em;
 	position: relative;
 	height: 45em;
+	background-image: url(../images/visuals-patterns-red.png);
+	background-attachment: fixed; /* chatgpt, prompt: hoe zet ik de background image op fixed */
+
 }
 
 main article h1:first-of-type{
@@ -472,19 +524,12 @@ footer article:first-of-type a{
 	header a:nth-of-type(8){
 		border-right: solid var(--color-background) 1px;
 	}
-	header a:nth-of-type(4), header a:nth-of-type(5){
-		border: solid var(--color-background) 2px;
-		padding: .3em .7em;
-		border-radius: 1em;
-	}
-    header a:nth-of-type(4):hover, header a:nth-of-type(5):hover{
-		background-color: var(--color-background);
-		color: var(--color-text);
-	}
+	
 	main section:nth-of-type(1) ul li::before {
 		width: 7em; 
 		height: 7em; 
 	}
+	
 
 
 
