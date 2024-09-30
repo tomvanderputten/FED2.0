@@ -48,6 +48,7 @@
 
 body{
 	margin: 0;
+	
 }
 
 h2{
@@ -67,7 +68,6 @@ header {
 	top: 0;
 
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	position: sticky;
 	z-index: 2;
@@ -80,57 +80,9 @@ header {
 	text-decoration:none;
 	font-family: 'SolaneTrial-Bold';
 	font-size: 1.9em;
+	z-index: 3;
   }
 
-
-   /* nav items */
-
-  
-  
-  
-  
-  
-  /********/
-  /* LOGO */
-  /********/
-  header > a:first-of-type {
-	/* om het boek en de titel te positioneren */
-	display:grid;
-	grid-template-columns:min-content min-content;
-	grid-gap:.25em;
-	align-items:center;
-	
-	font-weight:bold; 
-  }
-  
-  header > a:first-of-type img {
-	height:3em;
-  }
-  
-  
-  
-  
-  
-  /**********/
-  /* FAVO's */
-  /**********/
-  header > a:last-of-type {
-	/* icon en tekst met gap-je naast elkaar */
-	display:flex;
-	align-items:center;
-	column-gap:.25em;
-  }
-  
-  /* link icon */
-  header > a:last-of-type img {
-	width:auto;
-	height:2em;
-  }
-  
-  
-  
-  
-  
   /*****************/
   /* BEIDE BUTTONS */
   /*****************/
@@ -140,38 +92,41 @@ header {
 	/* icon en tekst met gap-je naast elkaar */
 	display:flex;
 	align-items:center;
-	gap:.25em;
 	/* standaard styling aanpassen */
 	appearance:none;
 	background: none;
 	border:none;
 	border-radius:.25em; 
-	font:inherit;
-	text-align:center;
 	color:var(--color-background);
   }
 
-  header > button svg {
+  header > button:first-of-type{
+	width: 3em;
+	background-color: var(--color-background);
+	border-radius: 50%;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: .7em;
+	z-index: 3;
+  }
+
+  header > button:nth-of-type(2) svg {
 	fill: var(--color-background);
-	width: 2.5em;
+	width: 3em;
 	fill: var(--color-text);
 	background-color: var(--color-background);
 	border-radius: 50%;
 	padding: .1em .1em .1em .2em;
   }
   
-  header button img {
-	height:1em;
-  }
-  
-  
-  
+
   /***************/
   /* MENU BUTTON */
   /***************/
-  header > button {
+  header button {
 	/* JOUW CODE HIER - stap 3 */
-	order: 2;
+	display: flex;
+	justify-content: flex-end;
 	
   }
   
@@ -201,24 +156,21 @@ header {
 	bottom: 0;
 	list-style: none;
 	background-image: url("../images/visuals-patterns-red.png");
-	transform: translateY(-120%);
+	transform: translateY(-100%);
 	transition: transform 0.3s ease-in-out;
 	gap: 1em;
   }
 
-  nav button svg{
-	position: absolute;
-    right: 1.55em;
-	width: 2.5em;
-	top: 1.2em;
 
-	fill: var(--color-text);
+  nav button{
+	position: absolute;
+    right: 1.8em;
+	width: 3em;
+	height: 3em;
+	top: 1.5em;
 	background-color: var(--color-background);
 	border-radius: 50%;
-	padding: .2em;
-
- 
-	
+	padding: .4em;
   }
 
 
@@ -237,35 +189,34 @@ header {
   /*******************/
   nav ul { 
 	margin:0; 
-	padding:0em;
+	padding: 12em 0;
 	list-style:none;
   }
-  
-  
+
   
   /************************/
   /* EEN LINK IN DE LIJST */
   /************************/
-  nav a {
+  nav ul a {
 	/* icon en tekst met gap-je naast elkaar */
 	display:flex;
 	align-items:center;
-	column-gap:.25em;
-	
-	border-bottom:solid 1px var(--menu-border);
+	text-decoration: none;
+	font-family: 'SolaneTrial-Bold';
+	color: var(--color-background);
+	padding: .2em 1em;
+	font-size: 1.8em;
   }
-  
-  nav a img {
-	width:auto;
-	height:2em;
+
+  /* ajax logo in hamburger*/
+  nav > a{
+	padding: .8em .9em;
+	color:var(--color-background);
+	text-decoration:none;
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1.9em;
   }
-  
-  nav a.active {
-	font-weight:bold;
-  }
-  
-  
-  
+
   
   
   /****************************************************************/
@@ -273,9 +224,8 @@ header {
   /****************************************************************/
   @media (min-width:38em) {
 	header > button {
-	  /* JOUW CODE HIER - stap 6 */
+
 	  display: none;
-	  
 	  
 	}
 	
@@ -322,14 +272,7 @@ header {
   /****************************************************************/
   /* styling voor de header als de browser minimaal 57em breed is */
   /****************************************************************/
-  @media (min-width:57em) {
-	header > a:last-of-type,
-	nav a {
-	  /* JOUW CODE HIER - stap 10 */
-	  flex-direction: row;
-	  
-	}
-  }
+
   
 
 
