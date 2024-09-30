@@ -61,27 +61,30 @@ p{
 }
 
 header {
-	min-height:4em;
+	min-height:5em;
 	padding:0 1em;
 	background-image:url(../images/visuals-patterns-red.png);
-	line-height:1;
-	
-	/* JOUW CODE HIER - stap 3 */
+	top: 0;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	position: sticky;
-	
-	
-	
+	z-index: 2;
   }
   
-  /* alle links in de header */
-  header a {
-	padding:.5em 0;
-	color:var(--general-color);
+  /* Ajax logo */
+  header > a:first-of-type{
+	padding:.4em;
+	color:var(--color-background);
 	text-decoration:none;
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1.9em;
   }
+
+
+   /* nav items */
+
   
   
   
@@ -145,12 +148,16 @@ header {
 	border-radius:.25em; 
 	font:inherit;
 	text-align:center;
-	color:var(--button-color);
+	color:var(--color-background);
   }
 
-  header button svg {
-	fill: white;
-	width: 32px;
+  header > button svg {
+	fill: var(--color-background);
+	width: 2.5em;
+	fill: var(--color-text);
+	background-color: var(--color-background);
+	border-radius: 50%;
+	padding: .1em .1em .1em .2em;
   }
   
   header button img {
@@ -185,34 +192,40 @@ header {
   /* HET MENU */
   /************/
   nav {
-	padding:1em;
-	
-	display:grid;
+	display: grid;
 	align-content:start;
-	gap:1em;
-	
-	background-image:var(--menu-gradient);
-	
-	/* JOUW CODE HIER - stap 1 */
 	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	
-	/* JOUW CODE HIER - stap 2 */
-	translate:-100% 0%;
-	
-	/* JOUW CODE HIER - stap 4 */
-	transition:translate .3s;
+	list-style: none;
+	background-image: url("../images/visuals-patterns-red.png");
+	transform: translateY(-120%);
+	transition: transform 0.3s ease-in-out;
+	gap: 1em;
+  }
+
+  nav button svg{
+	position: absolute;
+    right: 1.55em;
+	width: 2.5em;
+	top: 1.2em;
+
+	fill: var(--color-text);
+	background-color: var(--color-background);
+	border-radius: 50%;
+	padding: .2em;
+
+ 
 	
   }
-  
+
+
   /* als menu open is */
   nav.toonMenu {
 	/* JOUW CODE HIER - stap 4 */
-	translate:0% 0%;
-	
+	transform: translateY(0%);
   }
   
   
