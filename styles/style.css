@@ -344,156 +344,7 @@ header {
 	
   }
   
-  
-  
-  
-  
-  /****************************************************************/
-  /* styling voor de header als de browser minimaal 57em breed is */
-  /****************************************************************/
 
-  
-
-
-
-/* header {
-  min-height:5em;
-  background-color:var(--ajax-red); 
-  display: flex;
-  align-items: center;
-  position: sticky;
-  justify-content: space-between;
-  padding: 0 1em;
-  top: 0; 
-  z-index: 2;
-  background-image: url("../images/visuals-patterns-red.png");
-} */
-
-/* header nav{
-	display: flex;
-	justify-content: center;
-	gap: 1.1em;
-	align-items: center;
-	font-size: 1.05em;
-} */
-
-/* header img{
-	display: none;
-} */
-
-/* header nav a{
-	color: var(--color-background);
-	text-decoration: none;
-	font-family: 'SolaneTrial-Bold';
-	font-size: 1em;
-	justify-content: center;
-	position: relative;
-} */
-
-
-/* [class="navmedia" ]{
-	display: none;
- } */
-
-/*  header nav ul{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 4.5em;
-	bottom: 0;
-	margin-top: 0;
-	margin-bottom: 0;
-	list-style: none;
-	background-image: url("../images/visuals-patterns-red.png");
-	background-position: 0px -80px;
-	padding-top: 2em;
-	transform: translateY(-120%);
-	transition: transform 0.3s ease-in-out;
-	z-index: 1;
- }
-
-.toonMenu {
-	transform: translateY(0%);
-}
-
-
- header nav ul li{
-	padding: .3em;
-	font-size: 2em;
- }
-
-header > a:nth-child(2){
-	color: var(--color-background);
-	text-decoration: none;
-	padding-left: 0.2em;
-	font-size: 2em;
-	font-family: 'SolaneTrial-Bold';
-	margin-right: auto;
-}
-
-header a:nth-of-type(4), header a:nth-of-type(5){
-	border: solid var(--color-background) 2px;
-	padding: .3em .7em;
-	border-radius: 1em;
-}
-
-header a:nth-of-type(4):hover, header a:nth-of-type(5):hover{
-	background-color: var(--color-background);
-	color: var(--color-text);
-} */
-
-/* bron voor hover is https://youtu.be/_SWVPKY9ddI?si=ktKkbeRn0LwwXwa8 */
-
-/* header nav a:nth-of-type(1)::before, header nav a:nth-of-type(2)::before, header nav a:nth-of-type(3)::before {
-	content:'';
-	position: absolute;
-	bottom: -5px;
-	left: 0;
-	width: 0%;
-	height: 2px;
-	background-color: var(--color-background);
-	transition: all .5s;
-}
-
-header nav a:nth-of-type(1):hover::before, header nav a:nth-of-type(2):hover::before, header nav a:nth-of-type(3):hover::before {
-    width: 100%;
-} */
-/* 
-bron tot hier */
-
-/* header a:nth-child(6), a:nth-of-type(7) {
-	margin: 0.5em;
-}
-
-header a:nth-child(6) svg{
-	position: relative;
-	top: .1em;
-	width: 37px;
-	height: auto;
-	aspect-ratio: 1;
-	background-color: var(--color-background);
-	border-radius: 50%;
-	padding: 7px;
-}
-
-header a:nth-of-type(7) svg{
-	position: relative;
-	top: .1em;
-	width: 37px;
-	height: auto;
-	aspect-ratio: 1;
-	background-color: var(--color-background);
-	border-radius: 50%;
-	padding: 7px;
-	fill: var(--color-text);
-}
-
-header a:nth-of-type(8), header a:nth-of-type(9){
-   display: none;
-} */
 
 main article:first-of-type {
 	background-color: var(--ajax-red);
@@ -700,7 +551,7 @@ main article:nth-of-type(3) p:nth-of-type(2), article:nth-of-type(4) p:nth-of-ty
 	width: fit-content;
 } 
 
-article:nth-of-type(3) svg, article:nth-of-type(4) svg{
+main article:nth-of-type(3) svg, main article:nth-of-type(4) svg{
 	position: absolute;
 	bottom: 0.5em;
 	right: 0;
@@ -819,47 +670,47 @@ main article:nth-of-type(5) h2 {
   padding-left: 0.5em;
 }
 
-
-footer section{
-	font-family: 'SolaneTrial-Regular';
-	display: flex;
-	justify-content: space-between;
-	padding: 2em 1em ;
+main > img:last-of-type{
+	margin: 1em;
 }
 
 
-footer h3, footer ul{
+
+footer section {
+    font-family: 'SolaneTrial-Regular';
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 20px;
+    padding: 2em 1em;
+}
+
+footer h3, footer ul {
     margin: 0;
-}
-
-
-footer ul:nth-of-type(1), footer ul:nth-of-type(2) {
-    width: 45%;
-    margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-footer ul:nth-of-type(3), footer ul:nth-of-type(4) {
-    width: 45%;
-    margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-footer h3 {
-	font-family: 'SolaneTrial-Bold';
 }
 
 footer ul {
     list-style: none;
     padding: 0;
     margin-bottom: 0;
-	display: flex;
+    display: flex;
+    flex-direction: column;
 }
+
+footer h3 {
+    font-family: 'SolaneTrial-Bold';
+}
+
+
+
+
+
 
 footer article:first-of-type{
 	margin: 1em;
+}
+
+footer article:first-of-type p{
+	margin-top: .1em;
 }
 
 
@@ -873,11 +724,39 @@ footer article:first-of-type a{
 }
 
 
+footer article:nth-of-type(2), 
+footer article:last-of-type{
+	margin: 3em 1em;
+	display: flex;
+}
+
+footer article:nth-of-type(2) a svg{
+	width: 3em;
+	padding-top: .4em;
+}
+
+footer article:last-of-type a svg{
+	width: 5em;
+}
+
+footer article:nth-of-type(2) a,
+footer article:last-of-type a{
+	text-decoration: none;
+}
+
+footer > p {
+	font-size: .5em;
+	margin: 1em;
+}
 
 
+@media (min-width: 768px) {
+	main article:nth-of-type(5) {
+	  grid-template-columns: 1fr 1fr;
+	}
+  
 
-
-
+  }
 
 
 
