@@ -718,15 +718,19 @@ footer article:first-of-type p{
 }
 
 
-footer article:first-of-type a{
-	text-decoration: none;
-	color: var(--color-background);
-	background-color: #B3112F;
-	font-family: 'SolaneTrial-Bold';
-	padding: .2em .4em;
-	font-size: 1.3em;
+footer article:first-of-type a {
+    background-color: var(--ajax-red);
+    color: var(--color-background);
+    font-family: 'SolaneTrial-Bold';
+    padding: .3em .5em;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
+footer article:first-of-type a:hover {
+    transform: scale(1.1); 
+}
 
 footer article:nth-of-type(2), 
 footer article:last-of-type{
@@ -753,11 +757,16 @@ footer a{
 	color: var(--color-text);
 }
 
-footer a:hover{
+footer li a:hover{
 	color: var(--background-grey);
-	fill: var(--background-grey);
 	text-decoration: underline;
 }
+
+footer a:hover{
+	fill: var(--background-grey);
+}
+
+
 
 @media (min-width: 768px){
 	footer{
