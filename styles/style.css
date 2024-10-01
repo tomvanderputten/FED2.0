@@ -344,7 +344,10 @@ header {
 	
   }
   
-
+main{
+	display: flex;
+	flex-direction: column;
+}
 
 main article:first-of-type {
 	background-color: var(--ajax-red);
@@ -672,7 +675,11 @@ main article:nth-of-type(5) h2 {
 
 main > img:last-of-type{
 	margin: 1em;
+	width: 20em;
+	margin: auto;
 }
+
+
 
 
 
@@ -681,19 +688,18 @@ footer section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-gap: 20px;
-    padding: 2em 1em;
+    padding: 1.5em 1em;
+	max-width: 36em;
 }
 
 footer h3, footer ul {
     margin: 0;
 }
 
-footer ul {
+footer ul{
     list-style: none;
     padding: 0;
     margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 footer h3 {
@@ -701,12 +707,10 @@ footer h3 {
 }
 
 
-
-
-
-
 footer article:first-of-type{
 	margin: 1em;
+	max-width: 300px;
+	padding-top: 1em;
 }
 
 footer article:first-of-type p{
@@ -726,8 +730,8 @@ footer article:first-of-type a{
 
 footer article:nth-of-type(2), 
 footer article:last-of-type{
-	margin: 3em 1em;
-	display: flex;
+	margin: 2.3em 1em;
+	max-width: 300px;
 }
 
 footer article:nth-of-type(2) a svg{
@@ -741,22 +745,38 @@ footer article:last-of-type a svg{
 
 footer article:nth-of-type(2) a,
 footer article:last-of-type a{
+	text-decoration: none; /* rare paarse lijntjes onder svg weghalen */
+}
+
+footer a{
 	text-decoration: none;
+	color: var(--color-text);
 }
 
-footer > p {
-	font-size: .5em;
-	margin: 1em;
+footer a:hover{
+	color: var(--background-grey);
+	fill: var(--background-grey);
+	text-decoration: underline;
 }
 
-
-@media (min-width: 768px) {
-	main article:nth-of-type(5) {
-	  grid-template-columns: 1fr 1fr;
+@media (min-width: 768px){
+	footer{
+		display: flex;
+		justify-content: center;
 	}
-  
+}
 
-  }
+@media (min-width: 1024px){
+	footer{
+		justify-content: space-around;
+	}
+}
+
+
+
+
+
+
 
 
 
