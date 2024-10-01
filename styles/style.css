@@ -1,6 +1,3 @@
-/**************/
-/* CSS REMEDY */
-/**************/
 *, *::after, *::before {
 	box-sizing:border-box;  
 	max-width: 100%;
@@ -21,17 +18,7 @@
     src: url("../fonts/SolanelTrial-Thin-BF641d049e0de32.otf")
 }
 
-
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
 	--color-text:#181314;
 	--color-background:#ffffff;
 	--ajax-red: #B3112F;
@@ -39,12 +26,21 @@
 
 }
 
+/* @media (prefers-color-scheme: dark){
+    body {
+        background-color: black;
+        color: white;
+    }
+} */
 
-/****************/
-/* JOUW STYLING */
-/****************/
 
-/* jouw code */
+a:focus,
+button:focus{
+	box-shadow: 0 0 0 10px green;
+
+}
+
+
 
 body{
 	margin: 0;
@@ -87,9 +83,8 @@ header {
 	z-index: 3;
   }
 
-  /*****************/
-  /* BEIDE BUTTONS */
-  /*****************/
+/* onderstaande code gebruikt van zelf gemaakte codepen hamburger opdracht */
+
   header button {
 	padding:.5em;
 	
@@ -123,34 +118,19 @@ header {
 	padding: .1em .1em .1em .2em;
   }
   
-  
 
-  /***************/
-  /* MENU BUTTON */
-  /***************/
   header button {
-	/* JOUW CODE HIER - stap 3 */
 	display: flex;
 	justify-content: flex-end;
 	
   }
   
   
-  
-  /***************/
-  /* SLUIT BUTTON */
-  /***************/
   nav button {
    justify-self:start;
   }
   
-  
-  
-  
-  
-  /************/
-  /* HET MENU */
-  /************/
+
   nav {
 	display: grid;
 	align-content:start;
@@ -179,31 +159,20 @@ header {
   }
 
 
-  /* als menu open is */
   nav.toonMenu {
-	/* JOUW CODE HIER - stap 4 */
 	transform: translateY(0%);
   }
   
   
-  
-  
-  
-  /*******************/
-  /* LIJST MET LINKS */
-  /*******************/
+
   nav ul { 
 	margin:0; 
 	padding: 12em 0;
 	list-style:none;
   }
 
-  
-  /************************/
-  /* EEN LINK IN DE LIJST */
-  /************************/
+
   nav ul a {
-	/* icon en tekst met gap-je naast elkaar */
 	display:flex;
 	align-items:center;
 	text-decoration: none;
@@ -222,11 +191,7 @@ header {
 	font-size: 1.9em;
   }
 
-  
-  
-  /****************************************************************/
-  /* styling voor de header als de browser minimaal 38em breed is */
-  /****************************************************************/
+
   @media (min-width:870px) {
     header{
 		height: 7em;
@@ -439,7 +404,7 @@ main > article h1:first-of-type{
 	display: block;
 	position: absolute;
 	bottom: 0;
-	max-width: 360px;
+	max-width: 348px;
 
   }
 
@@ -453,7 +418,15 @@ main > article h1:first-of-type{
 	position: absolute;
 	z-index: 1;
 	bottom: 1em;
+	box-shadow: 5px 5px 13px black;
   }
+
+  main > article:first-of-type a:nth-of-type(1):hover{
+	color: var(--ajax-red);
+	background-color: gainsboro;
+  }
+
+
 
 main > section:nth-of-type(1) ul {
 	display: flex;
@@ -610,7 +583,7 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
 	left: 2.05em;
 	bottom: 3.5em;
 	font-size: 1.5em;
-	box-shadow: 5px 5px 8px black;
+	box-shadow: 5px 5px 13px black;
 }
 
 
@@ -626,6 +599,13 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
 	margin: 1em;
 	border-bottom: solid 1px var(--ajax-red);
 	display: block;
+}
+
+[class="grid-container"] article:nth-of-type(2) a,
+[class="grid-container"] article:nth-of-type(3) a{
+	text-decoration: none;
+	color: var(--color-text);
+
 }
 
 [class="grid-container"] article:nth-of-type(2) p:nth-of-type(2),
@@ -875,6 +855,68 @@ footer a:hover{
 }
 
 
+
+
+
+/* [class="pagina2"] section:first-of-type{
+	position: relative;
+}
+
+[class="pagina2"] h1{
+	font-family: 'SolaneTrial-Bold';
+	font-size: 5em;
+	position: absolute;
+	left: 42.5%;
+	color: var(--color-background);
+	z-index: 1;
+} */
+/* 
+[class="pagina2"] section:first-of-type > img{
+	padding: 2em 19em;
+} */
+
+header h1{
+	padding:.4em;
+	color:var(--color-background);
+	font-family: 'SolaneTrial-Bold';
+	font-size: 1.9em;
+	z-index: 3;
+}
+
+
+[class="pagina2"] div article{
+	position: relative;
+	margin: 1em;
+	border-bottom: solid 1px var(--ajax-red);
+	display: block;
+}
+
+[class="pagina2"] div article a{
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+[class="pagina2"] div article a p:nth-of-type(2){
+	background-color: var(--background-grey);
+	color: var(--color-background);
+	font-size: .65em;
+	padding: .5em;
+	width: fit-content;
+} 
+
+[class="pagina2"] div article svg{
+	position: absolute;
+	bottom: 0.5em;
+	right: 0;
+}
+
+
+
+/* [class="container-3artikel"] {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 0 18em;
+} */
 
 
 
