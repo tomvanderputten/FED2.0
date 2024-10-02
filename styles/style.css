@@ -192,120 +192,7 @@ header {
   }
 
 
-  @media (min-width:870px) {
-    header{
-		height: 7em;
-		display: flex;
-	}
 
-	header > button:nth-of-type(2) {
-	  display: none;
-	}
-
-	nav button{
-		display: none;
-	}
-
-
-	header img{
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: .6em;
-		left: 1em;
-	}
-
-	header > a:first-of-type {
-		position: absolute;
-		left: 2.5em;
-	  }
-
-
-	nav {
-		position: static;
-		translate: unset;
-		padding: 0;
-		background: none;
-		position: absolute;
-		justify-content: flex-end;
-		margin-right: 6em;
-		margin-top: 4.7em;
-
-	  }
-
-	  nav ul {
-		display: flex;	
-		gap: .6em;
-		padding: 0;
-		margin-bottom: -1.5em;
-		order: 1;
-	  }
-
-	  nav ul li a{
-		font-size: 1em;
-		padding: 0.5em;
-	  }
-
-	  header > button:first-of-type {
-		margin-right: 1em;
-		order: 2;
-	  }
-
-	  nav ul li a{
-		position: relative;
-	  }
-
-
-	  /* bron voor hover is https://youtu.be/_SWVPKY9ddI?si=ktKkbeRn0LwwXwa8 */
-
-	  nav ul li:nth-child(1) a::before, nav ul li:nth-child(2) a::before, nav ul li:nth-child(3) a::before, nav ul li:nth-child(6) a::before  {
-		content:'';
-		position: absolute;
-		bottom: -1px;
-		left: 0;
-		width: 0%;
-		height: 2px;
-		background-color: var(--color-background);
-		transition: all .5s;
-		
-	  }
-
-	  nav ul li:nth-child(1) a:hover::before, nav ul li:nth-child(2) a:hover::before, nav ul li:nth-child(3) a:hover::before, nav ul li:nth-child(6) a:hover::before{
-		width: 100%;
-	  } 
-
-	  /* bron tot hier */
-
-	  nav ul li:nth-child(4) a, nav ul li:nth-child(5) a{
-		border: solid var(--color-background) 2px;
-	    padding: .3em .7em;
-	    border-radius: 1em;
-	  }
-
-	  nav ul li:nth-child(4) a:hover, nav ul li:nth-child(5) a:hover{
-		background-color: var(--color-background);
-	    color: var(--color-text);
-		transition: all .5s;
-	  }
-
-	  nav ul li:nth-child(6) {
-		background-image: url('../images/mijnajax.svg');
-		background-repeat: no-repeat;
-		background-position: left center;
-		padding-left: 1.5em;
-		border-right: solid 1px var(--color-background);
-		padding-right: 1.8em;
-	}
-
-	header > button:first-of-type{
-		background-color: transparent;
-		fill: var(--color-background);
-		stroke: var(--color-background);
-	}
-
-  }
-  
 
 
 /* deze class moest omdat hij anders in de knoop zat met pagina 2 */
@@ -492,25 +379,6 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
 
 
 
-
-@media(min-width: 768px){
-	[class="grid-container"]{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-
-}
-
-@media(min-width: 1024px){
-	[class="grid-container"]{
-		max-width: 1400px;
-		margin: 0 auto;
-	}
-
-
-	
-}
-
 [class="grid-container"] article:nth-of-type(1){
 	margin: 1em;
 }
@@ -638,46 +506,7 @@ main > article:last-of-type {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 530px) {
-  main > article:last-of-type {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  main > article:last-of-type section:nth-of-type(2) {
-    display: block;
-  }
-}
-
-@media (min-width: 810px) {
-  main > article:last-of-type {
-    grid-template-columns: 1fr 1fr 1fr; 
-  }
-
-  main > article:last-of-type section:nth-of-type(3) {
-    display: block; 
-  }
-}
-
-@media (min-width: 1200px) {
-	main > article:last-of-type {
-	  grid-template-columns: 1fr 1fr 1fr 1fr; 
-	}
-
-	main > article:last-of-type section:nth-of-type(4) {
-		display: block;
-	  }
-  }
-
-
-  @media (min-width: 1400px) {
-	main > article:last-of-type {
-	  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-	}
-
-	main > article:last-of-type section:nth-of-type(5) {
-		display: block;
-	  }
-  }
 
   /* bron: chatgpt, hoe zorg ik dat de h2 geen deel uitmaakt van het grid systeem?*/
   
@@ -746,7 +575,7 @@ main > article:last-of-type h2 {
 }
 
 main > img:last-of-type {
-    margin: 6em auto 1em auto;
+    margin: 5em auto 1em auto;
     width: 20em;
     display: block;
 }
@@ -840,39 +669,6 @@ footer a:hover{
 
 
 
-@media (min-width: 768px){
-	footer{
-		display: flex;
-		justify-content: center;
-	}
-}
-
-@media (min-width: 1024px){
-	footer{
-		justify-content: space-around;
-	}
-}
-
-
-
-
-
-/* [class="pagina2"] section:first-of-type{
-	position: relative;
-}
-
-[class="pagina2"] h1{
-	font-family: 'SolaneTrial-Bold';
-	font-size: 5em;
-	position: absolute;
-	left: 42.5%;
-	color: var(--color-background);
-	z-index: 1;
-} */
-/* 
-[class="pagina2"] section:first-of-type > img{
-	padding: 2em 19em;
-} */
 
 header h1{
 	padding:.4em;
@@ -882,14 +678,6 @@ header h1{
 	z-index: 3;
 	margin: 0;
 }
-
-@media(min-width:870px){
-	header h1{
-		padding-left: 2em
-	}
-}
-
-
 
 
 
@@ -925,7 +713,9 @@ header h1{
 	right: 0;
 }
 
-
+[class="pagina2"] div article:nth-of-type(3){
+	display: none;
+}
 
 
 
@@ -1041,11 +831,129 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 
 
 
-/* [class="container-3artikel"] {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	padding: 0 18em;
-} */
+
+
+/* bron: chat gpt, kan je mijn dubbele media queries samenvoegen? */
+@media (min-width: 870px) {
+	header {
+	  height: 7em;
+	  display: flex;
+	}
+  
+	header > button:nth-of-type(2) {
+	  display: none;
+	}
+  
+	nav button {
+	  display: none;
+	}
+  
+	header img {
+	  position: absolute;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-bottom: .6em;
+	  left: 1em;
+	}
+  
+	header > a:first-of-type {
+	  position: absolute;
+	  left: 2.5em;
+	}
+  
+	nav {
+	  position: static;
+	  translate: unset;
+	  padding: 0;
+	  background: none;
+	  position: absolute;
+	  justify-content: flex-end;
+	  margin-right: 6em;
+	  margin-top: 4.7em;
+	}
+  
+	nav ul {
+	  display: flex;
+	  gap: .6em;
+	  padding: 0;
+	  margin-bottom: -1.5em;
+	  order: 1;
+	}
+  
+	nav ul li a {
+	  font-size: 1em;
+	  padding: 0.5em;
+	}
+  
+	header > button:first-of-type {
+	  margin-right: 1em;
+	  order: 2;
+	}
+  
+	nav ul li a {
+	  position: relative;
+	}
+  
+	/* bron voor hover is https://youtu.be/_SWVPKY9ddI?si=ktKkbeRn0LwwXwa8 */
+  
+	nav ul li:nth-child(1) a::before,
+	nav ul li:nth-child(2) a::before,
+	nav ul li:nth-child(3) a::before,
+	nav ul li:nth-child(6) a::before {
+	  content: '';
+	  position: absolute;
+	  bottom: -1px;
+	  left: 0;
+	  width: 0%;
+	  height: 2px;
+	  background-color: var(--color-background);
+	  transition: all .5s;
+	}
+  
+	nav ul li:nth-child(1) a:hover::before,
+	nav ul li:nth-child(2) a:hover::before,
+	nav ul li:nth-child(3) a:hover::before,
+	nav ul li:nth-child(6) a:hover::before {
+	  width: 100%;
+	}
+  
+	/* bron tot hier */
+  
+	nav ul li:nth-child(4) a,
+	nav ul li:nth-child(5) a {
+	  border: solid var(--color-background) 2px;
+	  padding: .3em .7em;
+	  border-radius: 1em;
+	}
+  
+	nav ul li:nth-child(4) a:hover,
+	nav ul li:nth-child(5) a:hover {
+	  background-color: var(--color-background);
+	  color: var(--color-text);
+	  transition: all .5s;
+	}
+  
+	nav ul li:nth-child(6) {
+	  background-image: url('../images/mijnajax.svg');
+	  background-repeat: no-repeat;
+	  background-position: left center;
+	  padding-left: 1.5em;
+	  border-right: solid 1px var(--color-background);
+	  padding-right: 1.8em;
+	}
+  
+	header > button:first-of-type {
+	  background-color: transparent;
+	  fill: var(--color-background);
+	  stroke: var(--color-background);
+	}
+  
+	header h1 {
+	  padding-left: 2em;
+	}
+  }
+  
 
 
 
@@ -1053,3 +961,110 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 
 
 
+  @media (min-width: 768px) {
+	footer {
+	  display: flex;
+	  justify-content: center;
+	  padding-top: 2em;
+	}
+  
+	[class="grid-container"] {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	}
+
+
+	[class="pagina2"] > section:first-of-type{
+		margin: 2em 5em ;
+	}
+
+	[class="pagina2"] div:first-of-type, 
+	[class="container-info"]{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 0 4em;
+	}
+
+
+  }
+  
+  @media (min-width: 1024px) {
+	footer {
+	  justify-content: space-around;
+	}
+  
+	[class="grid-container"] {
+	  max-width: 1400px;
+	  margin: 0 auto;
+	}
+
+	[class="pagina2"] div article:nth-of-type(3){
+		display: block;
+	}
+	
+	[class="pagina2"] div:first-of-type, 
+	[class="container-info"]{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin: 0 4em;
+	}
+
+
+  }
+
+
+  @media (min-width: 1300px){
+	[class="pagina2"] div:first-of-type, 
+	[class="container-info"]{
+		margin: 0 11em;
+	}
+
+	[class="pagina2"] > section:first-of-type{
+		margin: 4em 12em ;
+	}
+
+  }
+
+
+
+
+  /* voor onderste artikel met spelers, steeds eentje meer zichtbaar */
+  @media (min-width: 530px) {
+	main > article:last-of-type {
+	  grid-template-columns: 1fr 1fr;
+	}
+  
+	main > article:last-of-type section:nth-of-type(2) {
+	  display: block;
+	}
+  }
+  
+  @media (min-width: 810px) {
+	main > article:last-of-type {
+	  grid-template-columns: 1fr 1fr 1fr;
+	}
+  
+	main > article:last-of-type section:nth-of-type(3) {
+	  display: block;
+	}
+  }
+  
+  @media (min-width: 1200px) {
+	main > article:last-of-type {
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+  
+	main > article:last-of-type section:nth-of-type(4) {
+	  display: block;
+	}
+  }
+  
+  @media (min-width: 1400px) {
+	main > article:last-of-type {
+	  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+  
+	main > article:last-of-type section:nth-of-type(5) {
+	  display: block;
+	}
+  }
