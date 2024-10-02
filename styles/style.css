@@ -23,6 +23,8 @@
 	--color-background:#ffffff;
 	--ajax-red: #B3112F;
 	--background-grey: #413E3E;
+	--hover-article: grey;
+
 
 }
 
@@ -542,12 +544,10 @@ main > article:last-of-type section img {
 main > article:last-of-type section p:first-of-type {
   color: var(--color-background);
   font-family: 'SolaneTrial-Bold';
-  font-size: 4em;
+  font-size: 3em;
   position: absolute;
-  bottom: -.7em;
+  bottom: -.4em;
   left: .5em
-
-
 }
 
 main > article:last-of-type section p:nth-of-type(2) {
@@ -717,6 +717,9 @@ header h1{
 	display: none;
 }
 
+[class="pagina2"] div article:hover h2 {
+    color: var(--hover-article);
+}
 
 
 
@@ -975,7 +978,7 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 
 
 	[class="pagina2"] > section:first-of-type{
-		margin: 2em 5em ;
+		margin: 2em 5em 0 5em ;
 	}
 
 	[class="pagina2"] div:first-of-type, 
@@ -1009,6 +1012,10 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 		margin: 0 4em;
 	}
 
+	[class="pagina2"] > section:first-of-type{
+		margin: 2em 7em 1e 7em ;
+	}
+
 
   }
 
@@ -1020,7 +1027,7 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 	}
 
 	[class="pagina2"] > section:first-of-type{
-		margin: 4em 12em ;
+		margin: 4em 18em 2em 18em ;
 	}
 
   }
