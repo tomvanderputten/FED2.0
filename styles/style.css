@@ -65,12 +65,6 @@
 
 }
 
-/* @media (prefers-color-scheme: dark){
-    body {
-        background-color: black;
-        color: white;
-    }
-} */
 
 
 a:focus,
@@ -126,11 +120,8 @@ header {
 
   header button {
 	padding:.5em;
-	
-	/* icon en tekst met gap-je naast elkaar */
 	display:flex;
 	align-items:center;
-	/* standaard styling aanpassen */
 	appearance:none;
 	background: none;
 	border:none;
@@ -552,7 +543,7 @@ main > article:last-of-type {
   /* bron: chatgpt, hoe zorg ik dat de h2 geen deel uitmaakt van het grid systeem?*/
   
   main > article:last-of-type h2 {
-	grid-column: 1 / -1; /* Laat de h2 over de volledige breedte van het grid lopen */
+	grid-column: 1 / -1; 
 	padding-left: 0.5em;
   }
 
