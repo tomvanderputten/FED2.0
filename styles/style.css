@@ -308,8 +308,8 @@ header {
   
 
 
-
-main > article:first-of-type {
+/* deze class moest omdat hij anders in de knoop zat met pagina 2 */
+[class="eerstearikel"] {
 	background-color: var(--ajax-red);
 	margin-top: 0;
 	color: var(--color-background);
@@ -318,7 +318,6 @@ main > article:first-of-type {
 	height: 45em;
 	background-image: url(../images/visuals-patterns-red.png);
 	background-attachment: fixed; /* chatgpt, prompt: hoe zet ik de background image op fixed */
-
 }
 
 main > article h1:first-of-type{
@@ -634,55 +633,55 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
 
 
 
-main article:nth-of-type(2) {
+main > article:last-of-type {
   display: grid;
   grid-template-columns: 1fr;
 }
 
 @media (min-width: 530px) {
-  main article:nth-of-type(2) {
+  main > article:last-of-type {
     grid-template-columns: 1fr 1fr;
   }
 
-  main article:nth-of-type(2) section:nth-of-type(2) {
+  main > article:last-of-type section:nth-of-type(2) {
     display: block;
   }
 }
 
 @media (min-width: 810px) {
-  main article:nth-of-type(2) {
+  main > article:last-of-type {
     grid-template-columns: 1fr 1fr 1fr; 
   }
 
-  main article:nth-of-type(2) section:nth-of-type(3) {
+  main > article:last-of-type section:nth-of-type(3) {
     display: block; 
   }
 }
 
 @media (min-width: 1200px) {
-	main article:nth-of-type(2) {
+	main > article:last-of-type {
 	  grid-template-columns: 1fr 1fr 1fr 1fr; 
 	}
 
-	main article:nth-of-type(2) section:nth-of-type(4) {
+	main > article:last-of-type section:nth-of-type(4) {
 		display: block;
 	  }
   }
 
 
   @media (min-width: 1400px) {
-	main article:nth-of-type(2) {
+	main > article:last-of-type {
 	  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
 	}
 
-	main article:nth-of-type(2) section:nth-of-type(5) {
+	main > article:last-of-type section:nth-of-type(5) {
 		display: block;
 	  }
   }
 
   /* bron: chatgpt, hoe zorg ik dat de h2 geen deel uitmaakt van het grid systeem?*/
   
-  main > article:nth-of-type(2) h2 {
+  main > article:last-of-type h2 {
 	grid-column: 1 / -1; /* Laat de h2 over de volledige breedte van het grid lopen */
 	padding-left: 0.5em;
   }
@@ -690,28 +689,28 @@ main article:nth-of-type(2) {
   /* bron tot hier */
 
 
-  main article:nth-of-type(2) section {
+  main > article:last-of-type section {
 	display: none;
   }
   
-  main article:nth-of-type(2) section:nth-of-type(1) {
+  main > article:last-of-type section:nth-of-type(1) {
 	display: block;
   }
   
 
-main article:nth-of-type(2) section {
+main > article:last-of-type section {
   position: relative;
   background-image: url('../images/visuals-patterns-red2.png');
   margin: 1em;
   padding-bottom: 6em;
 }
 
-main article:nth-of-type(2) section img {
+main > article:last-of-type section img {
   border-bottom: solid 3px var(--color-background);
 }
 
 
-main article:nth-of-type(2) section p:first-of-type {
+main > article:last-of-type section p:first-of-type {
   color: var(--color-background);
   font-family: 'SolaneTrial-Bold';
   font-size: 4em;
@@ -722,7 +721,7 @@ main article:nth-of-type(2) section p:first-of-type {
 
 }
 
-main article:nth-of-type(2) section p:nth-of-type(2) {
+main > article:last-of-type section p:nth-of-type(2) {
   color: var(--color-background);
   font-family: 'SolaneTrial-Bold';
   font-size: 1.5em;
@@ -732,7 +731,7 @@ main article:nth-of-type(2) section p:nth-of-type(2) {
 
 }
 
-main article:nth-of-type(2) section p:nth-of-type(3) {
+main > article:last-of-type section p:nth-of-type(3) {
   color: var(--color-background);
   font-family: 'SolaneTrial-Regular';
   font-size: 1em;
@@ -742,12 +741,12 @@ main article:nth-of-type(2) section p:nth-of-type(3) {
 
 }
 
-main > article:nth-of-type(2) h2 {
+main > article:last-of-type h2 {
   padding-left: 0.5em;
 }
 
 main > img:last-of-type {
-    margin: 1em auto;
+    margin: 6em auto 1em auto;
     width: 20em;
     display: block;
 }
@@ -931,7 +930,7 @@ header h1{
 
 
 
-
+/* wedstrijden */
 
 [class="wedstrijden-grid"]{
 	display: grid;
@@ -989,6 +988,54 @@ header h1{
 
 
 
+
+
+
+/* standen */
+
+article:nth-of-type(2) section{
+	display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+    max-width: 600px;
+}
+
+[class="stand-grid"] h2, [class="stand-grid"] h3{
+    margin: 0;
+}
+
+article:nth-of-type(2) h3{
+	font-family: 'SolaneTrial-Regular';
+	padding: .5em 0;
+}
+
+
+article:nth-of-type(2) section span{
+	padding: 10px;
+    text-align: center;
+	font-family: 'SolaneTrial-Regular';
+	padding: .4em 0;
+}
+
+
+article:nth-of-type(2) section:first-of-type span, article:nth-of-type(2) section:nth-of-type(6) span{
+	font-family: 'SolaneTrial-Bold';
+}
+
+article:nth-of-type(2) section span:nth-of-type(2) {
+    text-align: left;
+}
+
+
+/* technische staf */
+
+[class="container-info"] article:nth-of-type(3) p span:nth-of-type(1){
+	font-family: 'SolaneTrial-Bold';
+}
+
+[class="container-info"] article:nth-of-type(3) p{
+	margin: .7em 0;
+	font-size: 1.05em;
+}
 
 
 
