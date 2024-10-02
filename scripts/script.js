@@ -9,10 +9,6 @@ function openMenu() {
 }
 
 
-
-
-
-
 var sluitButton = document.querySelector("nav button:nth-of-type(2)")
 
 sluitButton.onclick = sluitMenu

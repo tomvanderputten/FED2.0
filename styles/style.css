@@ -18,6 +18,43 @@
     src: url("../fonts/SolanelTrial-Thin-BF641d049e0de32.otf")
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+	  background-color: black;
+	  color: white;
+	}
+  
+	footer svg, main svg {
+	  filter: invert(100%);
+	}
+
+	footer li a, p, li, h2{
+		color: var(--color-background);
+	}
+
+	main section:nth-of-type(1) ul li span{
+		color: white;
+	}
+
+    footer a:hover, button:hover,
+	[class="pagina2"] div article:hover h2,
+	[class="grid-container"] article:nth-of-type(2):hover h2,
+	[class="grid-container"] article:nth-of-type(3):hover h2 {
+        color: cyan !important; /* Bron: chatgpt: hoe zorg ik er voor dat hij deze code in dark mode prioriteit geeft */
+		fill: cyan !important;
+    }
+
+	a:focus,
+    button:focus{
+	outline: 4px dashed rgb(0, 255, 26) !important; 
+    outline-offset: 3px; 
+
+}
+
+
+
+  }
+
 :root {
 	--color-text:#181314;
 	--color-background:#ffffff;
@@ -38,8 +75,8 @@
 
 a:focus,
 button:focus{
-	box-shadow: 0 0 0 10px green;
-
+	outline: 4px dashed rgb(0, 144, 14); 
+    outline-offset: 3px; 
 }
 
 
@@ -340,6 +377,8 @@ main > section:nth-of-type(1) ul li::before {
     margin-right: 1em;
 }
 
+
+/* Bron, chatgpt: hoe krijg ik een image als list stijl */
 main section:nth-of-type(1) ul li:first-of-type::before {
     background-image: url('../images/cirkel25.svg');
 }
@@ -356,9 +395,10 @@ main section:nth-of-type(1) ul li:nth-of-type(4)::before {
     background-image: url('../images/cirkel50.svg');
 }
 
+/* tot hier */
+
 main section:nth-of-type(1) ul li span:first-of-type {
     font-weight: bold;
-    color: var(--color-text);
     margin-right: 10px;
 	font-family: 'SolaneTrial-Bold';
 	font-size: 2.1em;
@@ -366,7 +406,6 @@ main section:nth-of-type(1) ul li span:first-of-type {
 
 main section:nth-of-type(1) ul li span:nth-of-type(2) {
 	font-weight: bold;
-    color: var(--color-text);
 	font-family: 'SolaneTrial-Regular';
 	display: flex;
 	font-size: 1em;
@@ -574,12 +613,17 @@ main > article:last-of-type h2 {
   padding-left: 0.5em;
 }
 
-main > img:last-of-type {
+main > svg:last-of-type {
     margin: 5em auto 1em auto;
     width: 20em;
     display: block;
 }
 
+[class="pagina2"] > svg:last-of-type {
+    margin: 8em auto 1em auto;
+    width: 20em;
+    display: block;
+}
 
 
 
@@ -717,7 +761,9 @@ header h1{
 	display: none;
 }
 
-[class="pagina2"] div article:hover h2 {
+[class="pagina2"] div article:hover h2,
+[class="grid-container"] article:nth-of-type(2):hover h2,
+[class="grid-container"] article:nth-of-type(3):hover h2{
     color: var(--hover-article);
 }
 
@@ -1075,3 +1121,6 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 	  display: block;
 	}
   }
+
+
+  
