@@ -3,6 +3,12 @@
 	max-width: 100%;
 }
 
+
+
+/* =========================================
+   Fonts
+   ========================================= */
+
 @font-face {
     font-family: 'SolaneTrial-Bold';
     src: url("../fonts/SolanelTrial-Bold-BF641d049dbbcae.otf")
@@ -17,6 +23,14 @@
     font-family: 'SolaneTrial-Thin';
     src: url("../fonts/SolanelTrial-Thin-BF641d049e0de32.otf")
 }
+
+
+
+
+
+/* =========================================
+   Dark mode
+   ========================================= */
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -48,12 +62,15 @@
     button:focus{
 	outline: 4px dashed rgb(0, 255, 26) !important; 
     outline-offset: 3px; 
-
 }
 
-
-
   }
+
+
+
+/* =========================================
+   Basiskleuren in website
+   ========================================= */
 
 :root {
 	--color-text:#181314;
@@ -61,11 +78,13 @@
 	--ajax-red: #B3112F;
 	--background-grey: #413E3E;
 	--hover-article: grey;
-
-
 }
 
 
+
+/* =========================================
+   Focus state voor screenreader en tab
+   ========================================= */
 
 a:focus,
 button:focus{
@@ -74,6 +93,10 @@ button:focus{
 }
 
 
+
+/* =========================================
+   Algemeen
+   ========================================= */
 
 body{
 	margin: 0;
@@ -89,6 +112,11 @@ h2{
 p{
 	font-family: 'SolaneTrial-Regular';
 }
+
+
+/* =========================================
+   Header beide pagina's
+   ========================================= */
 
 header {
 	min-height:5em;
@@ -225,6 +253,10 @@ header {
 
 
 
+/* =========================================
+   Eerste artikel over brobbey
+   ========================================= */
+
 /* deze class moest omdat hij anders in de knoop zat met pagina 2 */
 [class="eerstearikel"] {
 	background-color: var(--ajax-red);
@@ -249,6 +281,11 @@ main > article h1:first-of-type{
 	font-size: 1.2em;
 	max-width: 600px;
   }
+
+
+  /* =========================================
+   Responsiveness van erste artikel over brobbey
+   ========================================= */
 
   @media(min-width: 768px){
 
@@ -303,6 +340,8 @@ main > article h1:first-of-type{
 	}
 }
 
+
+
   main > article:first-child p:nth-child(3){
 	font-family: 'SolaneTrial-Bold';
 	font-size: 2em;
@@ -343,6 +382,10 @@ main > article h1:first-of-type{
   }
 
 
+
+  /* =========================================
+   Section met grafieken
+   ========================================= */
 
 main > section:nth-of-type(1) ul {
 	display: flex;
@@ -404,12 +447,9 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
 
 
 
-
-
-
-
-
-
+  /* =========================================
+   Artikelen pagina 1
+   ========================================= */
 
 [class="grid-container"] article:nth-of-type(1){
 	margin: 1em;
@@ -531,14 +571,14 @@ main section:nth-of-type(1) ul li span:nth-of-type(2) {
 
 
 
-
+  /* =========================================
+   Article Met brobbeys teamgenoten (grid)
+   ========================================= */
 
 main > article:last-of-type {
   display: grid;
   grid-template-columns: 1fr;
 }
-
-
 
   /* bron: chatgpt, hoe zorg ik dat de h2 geen deel uitmaakt van het grid systeem?*/
   
@@ -604,6 +644,11 @@ main > article:last-of-type h2 {
   padding-left: 0.5em;
 }
 
+
+  /* =========================================
+   Ajax for the future afbeelding
+   ========================================= */
+
 main > svg:last-of-type {
     margin: 5em auto 1em auto;
     width: 20em;
@@ -618,6 +663,9 @@ main > svg:last-of-type {
 
 
 
+  /* =========================================
+   Footer
+   ========================================= */
 
 footer section {
     font-family: 'SolaneTrial-Regular';
@@ -638,7 +686,7 @@ footer ul{
     margin-bottom: 0;
 }
 
-footer h3 {
+footer h3{
     font-family: 'SolaneTrial-Bold';
 }
 
@@ -705,6 +753,10 @@ footer a:hover{
 
 
 
+  /* =========================================
+   Pagina 2 (ajax 1)
+   ========================================= */
+
 header h1{
 	padding:.4em;
 	color:var(--color-background);
@@ -713,7 +765,6 @@ header h1{
 	z-index: 3;
 	margin: 0;
 }
-
 
 
 
@@ -760,7 +811,9 @@ header h1{
 
 
 
-/* wedstrijden */
+  /* =========================================
+   Grid met aankomende wedrijden
+   ========================================= */
 
 [class="wedstrijden-grid"]{
 	display: grid;
@@ -818,10 +871,9 @@ header h1{
 
 
 
-
-
-
-/* standen */
+  /* =========================================
+   Stand van de Eredivisie
+   ========================================= */
 
 article:nth-of-type(2) section{
 	display: grid;
@@ -856,7 +908,9 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 }
 
 
-/* technische staf */
+  /* =========================================
+   Technisch staf arkikel
+   ========================================= */
 
 [class="container-info"] article:nth-of-type(3) p span:nth-of-type(1){
 	font-family: 'SolaneTrial-Bold';
@@ -869,9 +923,9 @@ article:nth-of-type(2) section span:nth-of-type(2) {
 
 
 
-
-
-
+  /* =========================================
+   Media queries responsiveness
+   ========================================= */
 
 /* bron: chat gpt, kan je mijn dubbele media queries samenvoegen? */
 @media (min-width: 870px) {
